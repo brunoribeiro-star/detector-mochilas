@@ -1,5 +1,5 @@
 name: object_detector_app
-description: "A new Flutter project."
+description: "Um app Flutter para detectar mochilas usando YOLOv8 e Flask."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.0.4
-  http: ^0.13.6
+  image_picker: ^1.0.7
+  http: ^1.2.1
   path: ^1.8.3
   path_provider: ^2.1.1
 
@@ -49,6 +49,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -60,6 +62,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/logo.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -91,3 +95,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/logo.png"
+
+flutter_native_splash:
+  color: '#f7f8fa'
+  image: assets/logo.png
+  android: true
+  ios: false
